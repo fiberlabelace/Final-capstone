@@ -6,8 +6,7 @@ import Footer from "../Home/Footer/Footer";
 import { useTranslation } from "react-i18next";
 
 const Search = () => {
-    const { t } = useTranslation();
-
+    const {t} = useTranslation();
     const normalizeText = (text) => {
         return text
             .toLowerCase()
@@ -17,18 +16,14 @@ const Search = () => {
             .replace(/\s+/g, "")
             .trim();
     };
-
     const [searchParams] = useSearchParams();
     const query = searchParams.get("query") || "";
-
     const [courses, setCourses] = useState([]);
     const [relatedCourses, setRelatedCourses] = useState([]);
     const [loading, setLoading] = useState(true);
-
     useEffect(() => {
         const loadCourses = async () => {
             setLoading(true);
-
             try {
                 const res = await axios.get(
                     "https://elearningnew.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01",
@@ -38,10 +33,8 @@ const Search = () => {
                         }
                     }
                 );
-
                 const allCourses = res.data || [];
                 const searchText = normalizeText(query);
-
                 const filteredCourses = allCourses.filter((course) => {
                     const courseName = normalizeText(course.tenKhoaHoc || "");
                     const description = normalizeText(
@@ -50,44 +43,37 @@ const Search = () => {
                     const category = normalizeText(
                         course.danhMucKhoaHoc?.tenDanhMucKhoaHoc || ""
                     );
-
                     return (
                         courseName.includes(searchText) ||
                         description.includes(searchText) ||
                         category.includes(searchText)
                     );
                 });
-
                 const randomCourses = [...allCourses]
                     .sort(() => Math.random() - 0.5)
                     .slice(0, 6);
-
                 setRelatedCourses(randomCourses);
-
                 if (!searchText) {
                     setCourses([]);
                     return;
                 }
-
                 setCourses(filteredCourses);
-            } catch (err) {
+            }
+            catch (err) {
                 console.log("STATUS:", err.response?.status);
                 console.log("DATA:", err.response?.data);
-
                 setCourses([]);
                 setRelatedCourses([]);
-            } finally {
+            }
+            finally {
                 setLoading(false);
             }
         };
-
         loadCourses();
     }, [query]);
-
     return (
         <div>
             <Header />
-
             <div className="container my-5">
                 {loading ? (
                     <div className="text-center py-5">
@@ -98,38 +84,24 @@ const Search = () => {
                         <h1 className="mb-4">
                             {t("search.resultsFor", { query })}
                         </h1>
-
                         <h3 className="mb-4">
                             {t("search.coursesFound", {
                                 count: courses.length
                             })}
                         </h3>
-
                         <div className="row g-4">
                             {courses.map((course) => (
-                                <div
-                                    className="col-md-6 col-lg-4"
-                                    key={course.maKhoaHoc}
-                                >
-                                    <Link
-                                        to={`/${course.biDanh}`}
-                                        className="text-decoration-none"
-                                    >
+                                <div className="col-md-6 col-lg-4" key={course.maKhoaHoc}>
+                                    <Link to={`/${course.biDanh}`} className="text-decoration-none">
                                         <div className="card h-100">
-                                            <img
-                                                src={course.hinhAnh}
-                                                className="card-img-top"
-                                                alt={course.tenKhoaHoc}
+                                            <img src={course.hinhAnh} className="card-img-top" alt={course.tenKhoaHoc}
                                                 onError={(e) => {
                                                     e.currentTarget.src = `https://picsum.photos/seed/${course.biDanh}/500/300`;
-                                                }}
-                                            />
-
+                                                }}/>
                                             <div className="card-body">
                                                 <h5 className="card-title">
                                                     {course.tenKhoaHoc}
                                                 </h5>
-
                                                 <p className="card-text">
                                                     {course.moTa
                                                         ?.replace(/<[^>]*>/g, "")
@@ -137,14 +109,8 @@ const Search = () => {
                                                         t("course.noDescription")}
                                                 </p>
                                             </div>
-
                                             <div className="card-footer">
-                                                <span
-                                                    className="fw-bold"
-                                                    style={{
-                                                        color: "#f5d061"
-                                                    }}
-                                                >
+                                                <span className="fw-bold" style={{color: "#f5d061"}}>
                                                     {t("search.enroll")}
                                                 </span>
                                             </div>
@@ -158,32 +124,20 @@ const Search = () => {
                     <>
                         {query.trim() && (
                             <div className="text-center py-5">
-                                <i
-                                    className="bi bi-search"
-                                    style={{
-                                        fontSize: "60px",
-                                        color: "#FFC400"
-                                    }}
-                                ></i>
-
+                                <i className="bi bi-search" style={{fontSize: "60px", color: "#FFC400"}}></i>
                                 <h2 className="mt-4">
                                     {t("search.noCoursesFound")}
                                 </h2>
-
                                 <p className="text-secondary">
-                                    {t("search.noCoursesMatching", {
-                                        query
-                                    })}
+                                    {t("search.noCoursesMatching",{query})}
                                 </p>
                             </div>
                         )}
-
                         {!query.trim() && (
                             <h1 className="text-center mb-5">
                                 {t("search.interestedCourses")}
                             </h1>
                         )}
-
                         {relatedCourses.length > 0 && (
                             <>
                                 {query.trim() && (
@@ -191,32 +145,19 @@ const Search = () => {
                                         {t("search.relatedCourses")}
                                     </h2>
                                 )}
-
                                 <div className="row g-4">
                                     {relatedCourses.map((course) => (
-                                        <div
-                                            className="col-md-6 col-lg-4"
-                                            key={course.maKhoaHoc}
-                                        >
-                                            <Link
-                                                to={`/${course.biDanh}`}
-                                                className="text-decoration-none"
-                                            >
+                                        <div className="col-md-6 col-lg-4"  key={course.maKhoaHoc}>
+                                            <Link to={`/${course.biDanh}`} className="text-decoration-none">
                                                 <div className="card h-100">
-                                                    <img
-                                                        src={course.hinhAnh}
-                                                        className="card-img-top"
-                                                        alt={course.tenKhoaHoc}
+                                                    <img src={course.hinhAnh} className="card-img-top" alt={course.tenKhoaHoc}
                                                         onError={(e) => {
                                                             e.currentTarget.src = `https://picsum.photos/seed/${course.biDanh}/500/300`;
-                                                        }}
-                                                    />
-
+                                                        }}/>
                                                     <div className="card-body">
                                                         <h5 className="card-title">
                                                             {course.tenKhoaHoc}
                                                         </h5>
-
                                                         <p className="card-text">
                                                             {course.moTa
                                                                 ?.replace(/<[^>]*>/g, "")
@@ -224,14 +165,8 @@ const Search = () => {
                                                                 t("course.noDescription")}
                                                         </p>
                                                     </div>
-
                                                     <div className="card-footer">
-                                                        <span
-                                                            className="fw-bold"
-                                                            style={{
-                                                                color: "#f5d061"
-                                                            }}
-                                                        >
+                                                        <span className="fw-bold" style={{color: "#f5d061"}}>
                                                             {t("search.enroll")}
                                                         </span>
                                                     </div>
@@ -245,7 +180,6 @@ const Search = () => {
                     </>
                 )}
             </div>
-
             <Footer />
         </div>
     );

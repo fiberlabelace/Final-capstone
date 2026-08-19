@@ -26,7 +26,7 @@ const categoryLanguages = {
     "backend-golang": "Golang"
 };
 
-const Course = () => {
+const Course = ()=> {
     const { courseName } = useParams();
     const { t } = useTranslation();
     const [course, setCourse] = useState(null);
@@ -44,14 +44,14 @@ const Course = () => {
         )
         .then((res) => {
             const courses = res.data;
-
             const foundCourse = courses.find(
                 (item) => item.biDanh === courseName
             );
 
-            if (foundCourse) {
+            if (foundCourse){
                 setCourse(foundCourse);
-            } else {
+            }
+            else{
                 setCourse({
                     biDanh: courseName,
                     tenKhoaHoc: courseName
@@ -65,25 +65,20 @@ const Course = () => {
                 });
             }
         })
-        .catch((err) => {
+        .catch((err)=> {
             console.log("STATUS:", err.response?.status);
             console.log("DATA:", err.response?.data);
         });
     }, [courseName, t]);
 
     useEffect(() => {
-        if (!course) {
-            return;
-        }
-
+        if (!course) {return;}
         const prices = JSON.parse(localStorage.getItem("coursePrices")) || {};
-
         let coursePrice = prices[course.biDanh];
 
-        if (!coursePrice) {
+        if(!coursePrice){
             coursePrice = Math.floor(Math.random() * 81) + 20;
             prices[course.biDanh] = coursePrice;
-
             localStorage.setItem(
                 "coursePrices",
                 JSON.stringify(prices)
@@ -91,27 +86,21 @@ const Course = () => {
         }
 
         setPrice(coursePrice);
-
         const checkCourseStatus = () => {
             const cart = JSON.parse(localStorage.getItem("cart")) || [];
             const registeredCourses = JSON.parse(localStorage.getItem("registeredCourses")) || [];
-
             const alreadyInCart = cart.some(
                 (item) => item.biDanh === course.biDanh
             );
-
             const alreadyRegistered = registeredCourses.some(
                 (item) => item.biDanh === course.biDanh
             );
-
             setPurchased(alreadyInCart || alreadyRegistered);
         };
 
         checkCourseStatus();
-
         window.addEventListener("cartUpdated", checkCourseStatus);
         window.addEventListener("registeredUpdated", checkCourseStatus);
-
         return () => {
             window.removeEventListener("cartUpdated", checkCourseStatus);
             window.removeEventListener("registeredUpdated", checkCourseStatus);
@@ -119,40 +108,32 @@ const Course = () => {
     }, [course]);
 
     const purchaseCourse = () => {
-        if (!course || purchased) {
+        if (!course || purchased){
             return;
         }
 
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
         const registeredCourses = JSON.parse(localStorage.getItem("registeredCourses")) || [];
-
         const alreadyInCart = cart.some(
             (item) => item.biDanh === course.biDanh
         );
-
         const alreadyRegistered = registeredCourses.some(
             (item) => item.biDanh === course.biDanh
         );
-
-        if (alreadyInCart || alreadyRegistered) {
+        if(alreadyInCart || alreadyRegistered) {
             setPurchased(true);
             return;
         }
-
         const courseWithPrice = {
             ...course,
             price: price
         };
-
         const updatedCart = [...cart, courseWithPrice];
-
         localStorage.setItem(
             "cart",
             JSON.stringify(updatedCart)
         );
-
         setPurchased(true);
-
         window.dispatchEvent(
             new Event("cartUpdated")
         );
@@ -162,11 +143,9 @@ const Course = () => {
         return (
             <div>
                 <Header />
-
                 <div className="container my-5 text-center">
                     <h2>{t("common.loading")}</h2>
                 </div>
-
                 <Footer />
             </div>
         );
@@ -175,84 +154,53 @@ const Course = () => {
     return (
         <div>
             <Header />
-
             <div className="course-page container my-5">
                 <div className="row g-5 align-items-center">
-
                     <div className="col-lg-6">
-                        <img
-                            src={course.hinhAnh}
-                            className="course-image img-fluid rounded-4"
-                            alt={course.tenKhoaHoc}
+                        <img src={course.hinhAnh} className="course-image img-fluid rounded-4" alt={course.tenKhoaHoc}
                             onError={(e) => {
                                 e.currentTarget.src =
                                     `https://picsum.photos/seed/${course.biDanh}/800/500`;
-                            }}
-                        />
+                            }}/>
                     </div>
 
                     <div className="col-lg-6">
-
                         <span className="course-category">
-                            {categoryLanguages[courseName] ||
-                                course.danhMucKhoaHoc?.tenDanhMucKhoaHoc ||
-                                t("course.programming")}
+                            {categoryLanguages[courseName] || course.danhMucKhoaHoc?.tenDanhMucKhoaHoc || t("course.programming")}
                         </span>
-
                         <h1 className="course-title mt-3">
                             {course.tenKhoaHoc}
                         </h1>
-
                         <p className="course-description mt-4">
-                            {course.moTa?.replace(/<[^>]*>/g, "") ||
-                                t("course.noDescription")}
+                            {course.moTa?.replace(/<[^>]*>/g, "") || t("course.noDescription")}
                         </p>
-
                         <div className="course-info d-flex flex-wrap gap-4 mt-4">
-
                             <div>
                                 <i className="bi bi-eye me-2"></i>
                                 {course.luotXem || 0} {t("course.views")}
                             </div>
-
                             <div>
                                 <i className="bi bi-people me-2"></i>
                                 {course.soLuongHocVien || 0} {t("course.students")}
                             </div>
-
                             <div>
                                 <i className="bi bi-calendar3 me-2"></i>
                                 {course.ngayTao || t("course.recently")}
                             </div>
-
                         </div>
-
                         <div className="course-instructor mt-4">
                             <small>{t("course.instructor")}</small>
-
                             <h5>
                                 {course.nguoiTao?.hoTen || t("course.unknown")}
                             </h5>
                         </div>
-
-                        <button
-                            className={`course-purchase-btn mt-4 ${purchased ? "purchased" : ""}`}
-                            onClick={purchaseCourse}
-                            disabled={purchased}
-                        >
-                            <i
-                                className={`bi ${purchased ? "bi-check-lg" : "bi-cart-plus"} me-2`}
-                            ></i>
-
-                            {purchased
-                                ? t("course.alreadyPurchased")
-                                : `${t("course.purchaseCourse")} - $ ${price}`}
+                        <button className={`course-purchase-btn mt-4 ${purchased ? "purchased" : ""}`} onClick={purchaseCourse} disabled={purchased}>
+                            <i className={`bi ${purchased ? "bi-check-lg" : "bi-cart-plus"} me-2`}></i>
+                            {purchased ? t("course.alreadyPurchased") : `${t("course.purchaseCourse")} - $ ${price}`}
                         </button>
-
                     </div>
                 </div>
             </div>
-
             <Footer />
         </div>
     );

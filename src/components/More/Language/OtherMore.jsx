@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next";
 const OtherMore = () => {
     const [courses, setCourses] = useState([]);
     const { t } = useTranslation();
-
     useEffect(() => {
         axios.get(
             "https://elearningnew.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01",
@@ -42,22 +41,20 @@ const OtherMore = () => {
                 "backend",
                 "full stack",
             ];
-
             const otherCourses = allCourses.filter((course) => {
                 const courseName = course.tenKhoaHoc?.toLowerCase() || "";
                 const description = course.moTa?.toLowerCase() || "";
                 const category = course.danhMucKhoaHoc?.tenDanhMucKhoaHoc?.toLowerCase() || "";
-
                 return otherKeywords.some((keyword) =>
                     courseName.includes(keyword) ||
                     description.includes(keyword) ||
                     category.includes(keyword)
                 );
             });
-
-            if (otherCourses.length > 0) {
+            if(otherCourses.length > 0){
                 setCourses(otherCourses);
-            } else {
+            } 
+            else{
                 const randomCourses = [...allCourses]
                     .sort(() => Math.random() - 0.5)
                     .slice(0, 6);
@@ -70,64 +67,44 @@ const OtherMore = () => {
             console.log("DATA:", err.response?.data);
         });
     }, []);
-
     return (
         <div>
             <Header />
-
             <h1 className="text-center my-5">
                 {t("otherCourses.title")}
             </h1>
-
             <div className="container mb-5 pb-5">
                 <div className="row g-4">
                     {courses.map((course) => (
                         <div className="col-md-6 col-lg-4" key={course.maKhoaHoc}>
-                            <Link
-                                to={`/${course.biDanh}`}
-                                className="card h-100 text-decoration-none"
-                            >
-                                <img
-                                    src={course.hinhAnh}
-                                    className="card-img-top"
-                                    alt={course.tenKhoaHoc}
+                            <Link to={`/${course.biDanh}`} className="card h-100 text-decoration-none">
+                                <img src={course.hinhAnh} className="card-img-top" alt={course.tenKhoaHoc}
                                     onError={(e) => {
                                         e.currentTarget.src = `https://picsum.photos/seed/${course.maKhoaHoc}/500/300`;
-                                    }}
-                                />
-
+                                    }}/>
                                 <div className="card-body">
                                     <h5 className="card-title">
                                         {course.danhMucKhoaHoc?.tenDanhMucKhoaHoc || t("otherCourses.programming")}
                                     </h5>
-
                                     <hr />
-
                                     <h3 className="card-title">
                                         {course.tenKhoaHoc}
                                     </h3>
-
                                     <p className="card-author text-secondary mb-0">
                                         {course.nguoiTao?.hoTen || t("otherCourses.unknown")}
                                     </p>
                                 </div>
-
                                 <div className="card-footer">
                                     <div className="d-flex justify-content-between align-items-center">
                                         <div className="d-flex align-items-center gap-2 text-white small">
                                             <i className="bi bi-clock"></i>
-
                                             <span>
                                                 {course.soLopHoc
                                                     ? t("otherCourses.weeks", { count: course.soLopHoc })
                                                     : t("otherCourses.weeks", { count: 12 })}
                                             </span>
                                         </div>
-
-                                        <span
-                                            className="fw-bold"
-                                            style={{ color: "#f5d061" }}
-                                        >
+                                        <span className="fw-bold" style={{ color: "#f5d061" }}>
                                             {t("otherCourses.enroll")}
                                         </span>
                                     </div>
@@ -137,7 +114,6 @@ const OtherMore = () => {
                     ))}
                 </div>
             </div>
-
             <Footer />
         </div>
     );

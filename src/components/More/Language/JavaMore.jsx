@@ -20,7 +20,6 @@ const JavaMore = () => {
         )
         .then((res) => {
             const allCourses = res.data;
-
             const javaKeywords = [
                 "java",
                 "spring",
@@ -29,19 +28,16 @@ const JavaMore = () => {
                 "java back-end",
                 "java web",
             ];
-
             const javaCourses = allCourses.filter((course) => {
                 const courseName = course.tenKhoaHoc?.toLowerCase() || "";
                 const description = course.moTa?.toLowerCase() || "";
                 const category = course.danhMucKhoaHoc?.tenDanhMucKhoaHoc?.toLowerCase() || "";
-
                 return javaKeywords.some((keyword) =>
                     courseName.includes(keyword) ||
                     description.includes(keyword) ||
                     category.includes(keyword)
                 );
             });
-
             if (javaCourses.length > 0) {
                 setCourses(javaCourses);
             } else {
@@ -57,64 +53,44 @@ const JavaMore = () => {
             console.log("DATA:", err.response?.data);
         });
     }, []);
-
     return (
         <div>
             <Header />
-
             <h1 className="text-center my-5">
                 {t("javaCourses.title")}
             </h1>
-
             <div className="container mb-5 pb-5">
                 <div className="row g-4">
                     {courses.map((course) => (
                         <div className="col-md-6 col-lg-4" key={course.maKhoaHoc}>
-                            <Link
-                                to={`/${course.biDanh}`}
-                                className="card h-100 text-decoration-none"
-                            >
-                                <img
-                                    src={course.hinhAnh}
-                                    className="card-img-top"
-                                    alt={course.tenKhoaHoc}
+                            <Link to={`/${course.biDanh}`} className="card h-100 text-decoration-none">
+                                <img src={course.hinhAnh} className="card-img-top" alt={course.tenKhoaHoc}
                                     onError={(e) => {
                                         e.currentTarget.src = `https://picsum.photos/seed/${course.maKhoaHoc}/500/300`;
-                                    }}
-                                />
-
+                                    }}/>
                                 <div className="card-body">
                                     <h5 className="card-title">
                                         {course.danhMucKhoaHoc?.tenDanhMucKhoaHoc || t("javaCourses.java")}
                                     </h5>
-
-                                    <hr />
-
+                                    <hr/>
                                     <h3 className="card-title">
                                         {course.tenKhoaHoc}
                                     </h3>
-
                                     <p className="card-author text-secondary mb-0">
                                         {course.nguoiTao?.hoTen || t("javaCourses.unknown")}
                                     </p>
                                 </div>
-
                                 <div className="card-footer">
                                     <div className="d-flex justify-content-between align-items-center">
                                         <div className="d-flex align-items-center gap-2 text-white small">
                                             <i className="bi bi-clock"></i>
-
                                             <span>
                                                 {course.soLopHoc
                                                     ? t("javaCourses.weeks", { count: course.soLopHoc })
                                                     : t("javaCourses.weeks", { count: 12 })}
                                             </span>
                                         </div>
-
-                                        <span
-                                            className="fw-bold"
-                                            style={{ color: "#f5d061" }}
-                                        >
+                                        <span className="fw-bold" style={{ color: "#f5d061" }}>
                                             {t("javaCourses.enroll")}
                                         </span>
                                     </div>
@@ -124,7 +100,6 @@ const JavaMore = () => {
                     ))}
                 </div>
             </div>
-
             <Footer />
         </div>
     );

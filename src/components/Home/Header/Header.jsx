@@ -4,7 +4,7 @@ import Carousel from './Carousel'
 import Option from './Option'
 import Introduction from '../Main/Introduction'
 
-const Header = () => {
+const Header = () =>{
   return (
     <div>
       <Menu/>

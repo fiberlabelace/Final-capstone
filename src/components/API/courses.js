@@ -1,7 +1,6 @@
 ﻿import axios from "axios";
 
 const API = "https://elearningnew.cybersoft.edu.vn/api/QuanLyKhoaHoc";
-
 const api = axios.create({
     baseURL: API,
     headers: {

@@ -16,12 +16,12 @@ i18next
     .init({
         lng: "en",
         fallbackLng: "en",
-        resources: {
+        resources:{
             en: { translation: en },
             vi: { translation: vi },
             ja: { translation: ja }
         },
-        interpolation: {
+        interpolation:{
             escapeValue: false
         }
     });

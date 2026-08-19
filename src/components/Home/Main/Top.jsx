@@ -12,7 +12,6 @@ function Top() {
     const next2 = useRef(null);
     const [courses, setCourses] = useState([]);
     const { t } = useTranslation();
-
     useEffect(() => {
         axios.get(
             "https://elearningnew.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01",
@@ -30,12 +29,10 @@ function Top() {
             console.log("DATA:", err.response?.data);
         });
     }, []);
-
     return (
         <div className="container">
             <div className="d-flex justify-content-between">
                 <h1 className="pb-3">{t("top.title")}</h1>
-
                 <div>
                     <button ref={prev2} className="btn btn-outline-dark me-2 prev2">
                         ←
@@ -46,12 +43,7 @@ function Top() {
                     </button>
                 </div>
             </div>
-
-            <Swiper
-                modules={[Navigation]}
-                navigation={{ prevEl: ".prev2", nextEl: ".next2" }}
-                spaceBetween={50}
-                slidesPerView={3}
+            <Swiper modules={[Navigation]} navigation={{ prevEl: ".prev2", nextEl: ".next2" }} spaceBetween={50} slidesPerView={3}
                 breakpoints={{
                     0: {
                         slidesPerView: 1,
@@ -65,32 +57,20 @@ function Top() {
                         slidesPerView: 3,
                         spaceBetween: 50
                     }
-                }}
-            >
+                }}>
                 {courses.map((course) => (
                     <SwiperSlide key={course.maKhoaHoc}>
-                        <Link
-                            to={`/${course.biDanh}`}
-                            className="mx-auto m-5 text-decoration-none"
-                            style={{ maxWidth: "500px" }}
-                        >
+                        <Link to={`/${course.biDanh}`} className="mx-auto m-5 text-decoration-none" style={{ maxWidth: "500px" }}>
                             <div className="card">
-                                <img
-                                    src={course.hinhAnh}
-                                    className="card-img-top"
-                                    alt={course.tenKhoaHoc}
+                                <img src={course.hinhAnh} className="card-img-top" alt={course.tenKhoaHoc}
                                     onError={(e) => {
                                         e.currentTarget.src = `https://picsum.photos/seed/${course.maKhoaHoc}/180/400`;
-                                    }}
-                                />
-
+                                    }}/>
                                 <div className="card-body">
                                     <h5 className="card-title">
                                         {course.danhMucKhoaHoc?.tenDanhMucKhoaHoc || t("top.programming")}
                                     </h5>
-
                                     <hr />
-
                                     <h3 className="card-title">
                                         {course.tenKhoaHoc}
                                     </h3>
@@ -100,7 +80,6 @@ function Top() {
                     </SwiperSlide>
                 ))}
             </Swiper>
-
             <div className="d-flex justify-content-end">
                 <Link to="/top" className="btn d-flex justify-content-end">
                     {t("top.viewMore")}
