@@ -1,0 +1,331 @@
+{
+    "categories": {
+        "codeLanguage": "Code Language",
+        "webProgram": "Web Program",
+        "tester": "Tester",
+        "mobileDev": "Mobile Dev",
+        "dataAnalyst": "Data Analyst",
+        "aiEngineer": "AI Engineer",
+        "devops": "DevOps",
+        "dataScience": "Data Science",
+        "aiWork": "AI Work",
+        "aiOffice": "AI Office"
+    },
+
+    "categoryCourse": {
+        "courseAbout": "Course about {{name}}",
+        "noDescription": "No description available.",
+        "weeks": "Weeks",
+        "enroll": "Enroll"
+    },
+
+    "categoryCourses": {
+        "aiEngineer": "AI Engineer",
+        "dataAiAnalyst": "Data/AI Analyst",
+        "mlopsCloud": "MLOps/Cloud",
+        "dataPredictAnalyst": "Data Predict/Analyst",
+        "masteringAiEngineer": "Mastering AI Engineer",
+        "masteringDataEngineer": "Mastering Data Engineer",
+        "machineLearning": "Machine Learning",
+        "sqlPowerBiEtlPython": "SQL, Power BI, ETL Python",
+        "fullStackDev": "Full-stack Dev",
+        "backEndDev": "Back-end Dev",
+        "frontEndDev": "Front-end Dev",
+        "cloudEngineer": "Cloud Engineer",
+        "devOps": "Dev Ops",
+        "fullstackWeb": "Fullstack Web",
+        "codeArchitecture": "Code Architecture",
+        "bootcampJavaBackend": "Bootcamp Java Back-end",
+        "mobileAppDev": "Mobile App Dev",
+        "backendGolang": "Backend Golang"
+    },
+
+    "course": {
+        "noDescription": "No description available.",
+        "programming": "Programming",
+        "views": "Views",
+        "students": "Students",
+        "recently": "Recently",
+        "instructor": "Instructor",
+        "unknown": "Unknown",
+        "alreadyPurchased": "Already Purchased",
+        "purchaseCourse": "Purchase Course"
+    },
+
+    "common": {
+        "loading": "Loading..."
+    },
+
+    "address": {
+        "hoChiMinhCity": "Ho Chi Minh City",
+        "daNang": "Da Nang",
+        "headquarter": "Headquarter",
+        "hotline": "Hotline",
+        "address": "Address",
+        "district": "District",
+        "city": "City",
+        "floor": "Floor",
+        "ward": "Ward"
+    },
+
+    "header": {
+        "language": "Language",
+        "toggleNavigation": "Toggle navigation",
+        "search": "Search for classes",
+        "cart": "Cart",
+        "hello": "Hello",
+        "adminPanel": "Admin Panel",
+        "logOut": "Log Out",
+        "signUp": "Sign Up",
+        "close": "Close"
+    },
+
+    "cart": {
+        "shoppingCart": "Shopping Cart",
+        "delete": "Delete",
+        "payment": "Payment",
+        "deleteAll": "Delete All",
+        "noCoursesWaiting": "There are no courses waiting for payment.",
+        "myCourses": "My Courses",
+        "noEnrolledCourses": "You haven't enrolled in any courses yet."
+    },
+
+    "shortcuts": {
+        "backend": "Backend Programming",
+        "webDesign": "Web Design",
+        "mobileDev": "Mobile Development",
+        "frontend": "Front-end Programming",
+        "fullStack": "Full Stack Programming",
+        "programmingThinking": "Programming Thinking"
+    },
+
+    "footer": {
+        "language": "Language",
+        "notice": "Notice",
+        "termsOfUse": "Terms of Use",
+        "privacyPolicy": "Privacy Policy",
+        "faq": "FAQ",
+        "refund": "Refund",
+        "cookiePolicy": "Cookie Policy",
+        "changingCookieSettings": "Changing Cookie Settings",
+        "copyright": "2026 | Coded by Tran Minh Khoi"
+    },
+
+    "information": {
+        "refund": "Refund",
+        "helpCenter": "Help Center",
+        "site": "Site",
+        "contact": "CONTACT",
+        "reportInfringement": "Report Infringement",
+        "protectIP": "with Coloso to protect our IP rights."
+    },
+
+    "carousel": {
+        "previous": "Previous",
+        "next": "Next"
+    },
+    "languagePages": {
+        "python": "Python",
+        "java": "Java",
+        "other": "Other Languages",
+        "otherShort": "Other",
+        "viewMore": "View more"
+    },
+    "adminCourses": {
+        "title": "Admin Courses",
+        "adminCourse": "Admin Course",
+        "weeks": "{{count}} Weeks",
+        "recentlyAdded": "Recently Added",
+        "enroll": "Enroll",
+        "viewMore": "view more →",
+        "noCourses": "No courses have been added by the admin yet."
+    },
+
+    "introduction": {
+        "title": "CYBERSOFT - Project-Based Programming Training",
+        "description": "CyberSoft Academy is a pioneering institution in Vietnam that applies Active Learning and Flipped Learning methodologies through practical, real-world projects in IT training. Students take on the role of Scrum team members within an Agile framework, evolving into professional developers capable of meeting the recruitment needs of businesses.",
+        "ceo": "- CYBERSOFT CEO",
+        "center": "Center",
+        "students": "Students",
+        "collaborators": "Collaborators"
+    },
+
+    "recently": {
+        "title": "Recently Updated",
+        "programming": "Programming",
+        "weeks": "{{count}} Weeks",
+        "enroll": "Enroll",
+        "viewMore": "view more →"
+    },
+
+    "top": {
+        "title": "Today's TOP 10",
+        "programming": "Programming",
+        "viewMore": "view more →"
+    },
+    "javaCourses": {
+        "title": "JAVA COURSES",
+        "java": "Java",
+        "unknown": "Unknown",
+        "weeks": "{{count}} Weeks",
+        "enroll": "Enroll"
+    },
+    "pythonCourses": {
+        "title": "PYTHON COURSES",
+        "python": "Python",
+        "unknown": "Unknown",
+        "weeks": "{{count}} Weeks",
+        "enroll": "Enroll"
+    },
+    "otherCourses": {
+        "title": "OTHER COURSES",
+        "programming": "Programming",
+        "unknown": "Unknown",
+        "weeks": "{{count}} Weeks",
+        "enroll": "Enroll"
+    },
+    "recentlyMore": {
+        "title": "RECENTLY ADDED",
+        "newest": "Newest",
+        "oldest": "Oldest",
+        "programming": "Programming",
+        "weeks": "{{count}} Weeks",
+        "enroll": "Enroll",
+        "unknown": "Unknown"
+    },
+    "topMore": {
+        "title": "TOP PICKED, by students",
+        "programming": "Programming",
+        "weeks": "{{count}} Weeks",
+        "enroll": "Enroll",
+        "unknown": "Unknown"
+    },
+    "admin": {
+        "addNewCourse": "Add New Course",
+        "courseName": "Course Name",
+        "courseSlug": "Course Slug",
+        "imageUrl": "Image URL",
+        "category": "Category",
+        "description": "Description",
+        "price": "Price",
+        "addCourse": "Add Course",
+        "courseNamePlaceholder": "React Development",
+        "courseSlugPlaceholder": "react-development",
+        "imageUrlPlaceholder": "https://...",
+        "categoryPlaceholder": "Web Development",
+        "descriptionPlaceholder": "Course description...",
+        "pricePlaceholder": "50",
+        "courseNameSlugRequired": "Course name and slug are required.",
+        "slugExists": "A course with this slug already exists.",
+        "courseAdded": "Course added successfully!",
+        "adminPanel": "Admin Panel",
+        "welcome": "Welcome",
+        "addCourses": "Add Courses",
+        "addCoursesDescription": "Add new courses to the website.",
+        "removeCourses": "Remove Courses",
+        "removeCoursesDescription": "Remove existing courses from the website.",
+        "manageUsers": "Manage Users",
+        "manageUsersDescription": "View and manage accounts.",
+        "editUser": "Edit User",
+        "saveChanges": "Save Changes",
+        "cancel": "Cancel",
+        "name": "Name",
+        "email": "Email",
+        "password": "Password",
+        "role": "Role",
+        "action": "Action",
+        "edit": "Edit",
+        "delete": "Delete",
+        "noRegisteredUsers": "No registered users.",
+        "userFieldsRequired": "Name, email and password cannot be empty.",
+        "emailExists": "Another user already has this email.",
+        "reservedEmail": "This email is reserved for the admin account.",
+        "userUpdated": "User information updated successfully.",
+        "deleteConfirmation": "Are you sure you want to delete {{email}}?",
+        "removeCoursesDescriptionFull": "This list contains all courses currently visible on the website.",
+        "removeCourse": "Remove Course",
+        "courseRemoved": "Course removed successfully!",
+        "confirmRemoveCourse": "Are you sure you want to remove \"{{course}}\"?",
+        "noCoursesAvailable": "No courses available."
+    },
+
+    "courses": {
+        "javaCourses": "JAVA COURSES",
+        "pythonCourses": "PYTHON COURSES",
+        "otherCourses": "OTHER COURSES",
+        "programming": "Programming",
+        "java": "Java",
+        "unknown": "Unknown",
+        "weeks": "{{count}} Weeks",
+        "defaultWeeks": "12 Weeks",
+        "enroll": "Enroll",
+        "recentlyAdded": "RECENTLY ADDED",
+        "newest": "Newest",
+        "oldest": "Oldest",
+        "topPicked": "TOP PICKED, by students"
+    },
+    "login": {
+        "welcomeBack": "Welcome Back!",
+        "email": "Email",
+        "password": "Password",
+        "emailPlaceholder": "Enter your email",
+        "passwordPlaceholder": "Enter your password",
+        "logIn": "Log In",
+        "newUser": "New user?",
+        "signUp": "Sign Up",
+        "backToHome": "Back to Home",
+        "incorrectCredentials": "Incorrect email or password."
+    },
+    "payment": {
+        "payment": "PAYMENT",
+        "cartEmpty": "Your cart is empty",
+        "addCourseBeforePayment": "Add a course to your cart before making a payment.",
+        "browseCourses": "Browse Courses",
+        "paymentInformation": "Payment Information",
+        "card": "Card",
+        "cardNumber": "Card Number",
+        "cardholderName": "Cardholder Name",
+        "yourName": "Your Name",
+        "expiryDate": "Expiry Date",
+        "paypalRedirect": "You will be redirected to PayPal to complete your payment.",
+        "pay": "Pay",
+        "orderSummary": "Order Summary",
+        "courses": "Courses",
+        "subtotal": "Subtotal",
+        "discount": "Discount",
+        "total": "Total",
+        "paymentSuccessful": "Payment successful!"
+    },
+    "search": {
+        "loading": "Loading courses...",
+        "resultsFor": "Search results for \"{{query}}\"",
+        "coursesFound_one": "{{count}} course found",
+        "coursesFound_other": "{{count}} courses found",
+        "noCoursesFound": "No courses found",
+        "noCoursesMatching": "We couldn't find any courses matching \"{{query}}\".",
+        "interestedCourses": "Courses you might be interested in",
+        "relatedCourses": "Related courses you might be interested in",
+        "enroll": "Enroll"
+    },
+    "signup": {
+        "createAccount": "Create your account",
+        "fullName": "Full Name",
+        "fullNamePlaceholder": "Enter your full name",
+        "email": "Email",
+        "emailPlaceholder": "Enter your email",
+        "password": "Password",
+        "passwordPlaceholder": "Enter your password",
+        "confirmPassword": "Confirm Password",
+        "confirmPasswordPlaceholder": "Confirm your password",
+        "agreeTerms": "I agree to the Terms of Service and Privacy Policy",
+        "signUp": "Sign Up",
+        "alreadyHaveAccount": "Already have an account?",
+        "logIn": "Log In",
+        "backToHome": "Back to Home",
+        "passwordMismatch": "Passwords do not match!",
+        "agreeRequired": "Please agree to the Terms of Service and Privacy Policy.",
+        "emailExists": "An account with this email already exists.",
+        "emailReserved": "This email is reserved.",
+        "accountCreated": "Account created successfully!"
+    }
+}

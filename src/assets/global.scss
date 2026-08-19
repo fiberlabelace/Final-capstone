@@ -1,0 +1,21 @@
+@use "./SASS/Category";
+@use "./SASS/Course";
+@use "./SASS/Footer";
+@use "./SASS/Header";
+@use "./SASS/Main";
+@use "./SASS/More";
+@use "./SASS/Payment";
+
+@import "./styles/component";
+@import "./styles/variable";
+@import "./styles/mixin";
+@import "./styles/reset";
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap');
+
+* {
+    font-family: "Hanken Grotesk", sans-serif;
+}
+html, body{
+    overflow-x: hidden;
+    background-color: #121212;
+}

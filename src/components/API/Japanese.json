@@ -1,0 +1,341 @@
+{
+    "categories": {
+        "codeLanguage": "プログラミング言語",
+        "webProgram": "Webプログラミング",
+        "tester": "テスター",
+        "mobileDev": "モバイル開発",
+        "dataAnalyst": "データアナリスト",
+        "aiEngineer": "AIエンジニア",
+        "devops": "DevOps",
+        "dataScience": "データサイエンス",
+        "aiWork": "AI業務",
+        "aiOffice": "AIオフィス"
+    },
+
+    "categoryCourse": {
+        "courseAbout": "{{name}}に関するコース",
+        "noDescription": "説明はありません。",
+        "weeks": "週間",
+        "enroll": "登録"
+    },
+
+    "categoryCourses": {
+        "aiEngineer": "AIエンジニア",
+        "dataAiAnalyst": "データ/AIアナリスト",
+        "mlopsCloud": "MLOps/クラウド",
+        "dataPredictAnalyst": "データ予測/アナリスト",
+        "masteringAiEngineer": "AIエンジニア完全習得",
+        "masteringDataEngineer": "データエンジニア完全習得",
+        "machineLearning": "機械学習",
+        "sqlPowerBiEtlPython": "SQL、Power BI、ETL Python",
+        "fullStackDev": "フルスタック開発",
+        "backEndDev": "バックエンド開発",
+        "frontEndDev": "フロントエンド開発",
+        "cloudEngineer": "クラウドエンジニア",
+        "devOps": "DevOps",
+        "fullstackWeb": "フルスタックWeb",
+        "codeArchitecture": "コードアーキテクチャ",
+        "bootcampJavaBackend": "Javaバックエンドブートキャンプ",
+        "mobileAppDev": "モバイルアプリ開発",
+        "backendGolang": "Golangバックエンド"
+    },
+
+    "course": {
+        "noDescription": "説明はありません。",
+        "programming": "プログラミング",
+        "views": "閲覧数",
+        "students": "受講者",
+        "recently": "最近",
+        "instructor": "講師",
+        "unknown": "不明",
+        "alreadyPurchased": "購入済み",
+        "purchaseCourse": "コースを購入"
+    },
+
+    "common": {
+        "loading": "読み込み中..."
+    },
+
+    "address": {
+        "hoChiMinhCity": "ホーチミン市",
+        "daNang": "ダナン",
+        "headquarter": "本社",
+        "hotline": "ホットライン",
+        "address": "住所",
+        "district": "区",
+        "city": "市",
+        "floor": "階",
+        "ward": "坊"
+    },
+
+    "header": {
+        "language": "言語",
+        "toggleNavigation": "ナビゲーションを切り替える",
+        "search": "コースを検索",
+        "cart": "カート",
+        "hello": "こんにちは",
+        "adminPanel": "管理パネル",
+        "logOut": "ログアウト",
+        "signUp": "新規登録",
+        "close": "閉じる"
+    },
+
+    "cart": {
+        "shoppingCart": "ショッピングカート",
+        "delete": "削除",
+        "payment": "支払い",
+        "deleteAll": "すべて削除",
+        "noCoursesWaiting": "支払い待ちのコースはありません。",
+        "myCourses": "マイコース",
+        "noEnrolledCourses": "まだコースに登録していません。"
+    },
+
+    "shortcuts": {
+        "backend": "バックエンドプログラミング",
+        "webDesign": "Webデザイン",
+        "mobileDev": "モバイル開発",
+        "frontend": "フロントエンドプログラミング",
+        "fullStack": "フルスタックプログラミング",
+        "programmingThinking": "プログラミング思考"
+    },
+
+    "footer": {
+        "language": "言語",
+        "notice": "お知らせ",
+        "termsOfUse": "利用規約",
+        "privacyPolicy": "プライバシーポリシー",
+        "faq": "よくある質問",
+        "refund": "返金",
+        "cookiePolicy": "Cookieポリシー",
+        "changingCookieSettings": "Cookie設定の変更",
+        "copyright": "2026 | Tran Minh Khoi 作"
+    },
+
+    "information": {
+        "refund": "返金",
+        "helpCenter": "ヘルプセンター",
+        "site": "サイト",
+        "contact": "お問い合わせ",
+        "reportInfringement": "権利侵害を報告",
+        "protectIP": "Colosoとともに知的財産権を保護します。"
+    },
+
+    "carousel": {
+        "previous": "前へ",
+        "next": "次へ"
+    },
+
+    "languagePages": {
+        "python": "Python",
+        "java": "Java",
+        "other": "その他の言語",
+        "otherShort": "その他",
+        "viewMore": "もっと見る"
+    },
+
+    "adminCourses": {
+        "title": "管理者コース",
+        "adminCourse": "管理者コース",
+        "weeks": "{{count}}週間",
+        "recentlyAdded": "最近追加",
+        "enroll": "登録",
+        "viewMore": "もっと見る →",
+        "noCourses": "管理者によって追加されたコースはまだありません。"
+    },
+
+    "introduction": {
+        "title": "CYBERSOFT - プロジェクトベースのプログラミング研修",
+        "description": "CyberSoft Academyは、実践的かつ現実的なITプロジェクトを通じて、アクティブラーニングと反転学習の手法を導入しているベトナムの先駆的な教育機関です。学生はAgileフレームワークの中でScrumチームのメンバーとして活動し、企業の採用ニーズに応えられるプロフェッショナルな開発者へと成長していきます。",
+        "ceo": "- CYBERSOFT CEO",
+        "center": "センター",
+        "students": "学生",
+        "collaborators": "協力者"
+    },
+
+    "recently": {
+        "title": "最近更新されたコース",
+        "programming": "プログラミング",
+        "weeks": "{{count}}週間",
+        "enroll": "登録",
+        "viewMore": "もっと見る →"
+    },
+
+    "top": {
+        "title": "本日のTOP 10",
+        "programming": "プログラミング",
+        "viewMore": "もっと見る →"
+    },
+
+    "javaCourses": {
+        "title": "JAVAコース",
+        "java": "Java",
+        "unknown": "不明",
+        "weeks": "{{count}}週間",
+        "enroll": "登録"
+    },
+
+    "pythonCourses": {
+        "title": "PYTHONコース",
+        "python": "Python",
+        "unknown": "不明",
+        "weeks": "{{count}}週間",
+        "enroll": "登録"
+    },
+
+    "otherCourses": {
+        "title": "その他のコース",
+        "programming": "プログラミング",
+        "unknown": "不明",
+        "weeks": "{{count}}週間",
+        "enroll": "登録"
+    },
+
+    "recentlyMore": {
+        "title": "最近追加されたコース",
+        "newest": "新しい順",
+        "oldest": "古い順",
+        "programming": "プログラミング",
+        "weeks": "{{count}}週間",
+        "enroll": "登録",
+        "unknown": "不明"
+    },
+
+    "topMore": {
+        "title": "学生に人気のコース",
+        "programming": "プログラミング",
+        "weeks": "{{count}}週間",
+        "enroll": "登録",
+        "unknown": "不明"
+    },
+
+    "admin": {
+        "addNewCourse": "新しいコースを追加",
+        "courseName": "コース名",
+        "courseSlug": "コーススラッグ",
+        "imageUrl": "画像URL",
+        "category": "カテゴリー",
+        "description": "説明",
+        "price": "価格",
+        "addCourse": "コースを追加",
+        "courseNamePlaceholder": "React Development",
+        "courseSlugPlaceholder": "react-development",
+        "imageUrlPlaceholder": "https://...",
+        "categoryPlaceholder": "Web Development",
+        "descriptionPlaceholder": "コースの説明...",
+        "pricePlaceholder": "50",
+        "courseNameSlugRequired": "コース名とスラッグは必須です。",
+        "slugExists": "このスラッグのコースはすでに存在します。",
+        "courseAdded": "コースが正常に追加されました！",
+        "adminPanel": "管理パネル",
+        "welcome": "ようこそ",
+        "addCourses": "コースを追加",
+        "addCoursesDescription": "ウェブサイトに新しいコースを追加します。",
+        "removeCourses": "コースを削除",
+        "removeCoursesDescription": "ウェブサイトから既存のコースを削除します。",
+        "manageUsers": "ユーザー管理",
+        "manageUsersDescription": "アカウントを確認・管理します。",
+        "editUser": "ユーザーを編集",
+        "saveChanges": "変更を保存",
+        "cancel": "キャンセル",
+        "name": "名前",
+        "email": "メールアドレス",
+        "password": "パスワード",
+        "role": "役割",
+        "action": "操作",
+        "edit": "編集",
+        "delete": "削除",
+        "noRegisteredUsers": "登録ユーザーはいません。",
+        "userFieldsRequired": "名前、メールアドレス、パスワードを空欄にすることはできません。",
+        "emailExists": "このメールアドレスは別のユーザーがすでに使用しています。",
+        "reservedEmail": "このメールアドレスは管理者アカウント専用です。",
+        "userUpdated": "ユーザー情報が正常に更新されました。",
+        "deleteConfirmation": "{{email}}を削除してもよろしいですか？",
+        "removeCoursesDescriptionFull": "このリストには現在ウェブサイトに表示されているすべてのコースが含まれています。",
+        "removeCourse": "コースを削除",
+        "courseRemoved": "コースが正常に削除されました！",
+        "confirmRemoveCourse": "「{{course}}」を削除してもよろしいですか？",
+        "noCoursesAvailable": "利用可能なコースはありません。"
+    },
+
+    "courses": {
+        "javaCourses": "JAVAコース",
+        "pythonCourses": "PYTHONコース",
+        "otherCourses": "その他のコース",
+        "programming": "プログラミング",
+        "java": "Java",
+        "unknown": "不明",
+        "weeks": "{{count}}週間",
+        "defaultWeeks": "12週間",
+        "enroll": "登録",
+        "recentlyAdded": "最近追加されたコース",
+        "newest": "新しい順",
+        "oldest": "古い順",
+        "topPicked": "学生に人気のコース"
+    },
+
+    "login": {
+        "welcomeBack": "おかえりなさい！",
+        "email": "メールアドレス",
+        "password": "パスワード",
+        "emailPlaceholder": "メールアドレスを入力してください",
+        "passwordPlaceholder": "パスワードを入力してください",
+        "logIn": "ログイン",
+        "newUser": "新規ユーザーですか？",
+        "signUp": "新規登録",
+        "backToHome": "ホームに戻る",
+        "incorrectCredentials": "メールアドレスまたはパスワードが正しくありません。"
+    },
+
+    "payment": {
+        "payment": "お支払い",
+        "cartEmpty": "カートは空です",
+        "addCourseBeforePayment": "お支払いの前にコースをカートに追加してください。",
+        "browseCourses": "コースを見る",
+        "paymentInformation": "お支払い情報",
+        "card": "カード",
+        "cardNumber": "カード番号",
+        "cardholderName": "カード名義人",
+        "yourName": "お名前",
+        "expiryDate": "有効期限",
+        "paypalRedirect": "お支払いを完了するためにPayPalへ移動します。",
+        "pay": "支払う",
+        "orderSummary": "注文概要",
+        "courses": "コース",
+        "subtotal": "小計",
+        "discount": "割引",
+        "total": "合計",
+        "paymentSuccessful": "支払いが完了しました！"
+    },
+    "search": {
+        "loading": "コースを読み込んでいます...",
+        "resultsFor": "\"{{query}}\"の検索結果",
+        "coursesFound_one": "{{count}}件のコースが見つかりました",
+        "coursesFound_other": "{{count}}件のコースが見つかりました",
+        "noCoursesFound": "コースが見つかりませんでした",
+        "noCoursesMatching": "\"{{query}}\"に一致するコースは見つかりませんでした。",
+        "interestedCourses": "おすすめのコース",
+        "relatedCourses": "関連するおすすめコース",
+        "enroll": "登録"
+    },
+    "signup": {
+        "createAccount": "アカウントを作成",
+        "fullName": "氏名",
+        "fullNamePlaceholder": "氏名を入力してください",
+        "email": "メールアドレス",
+        "emailPlaceholder": "メールアドレスを入力してください",
+        "password": "パスワード",
+        "passwordPlaceholder": "パスワードを入力してください",
+        "confirmPassword": "パスワードを確認",
+        "confirmPasswordPlaceholder": "パスワードをもう一度入力してください",
+        "agreeTerms": "利用規約とプライバシーポリシーに同意します",
+        "signUp": "新規登録",
+        "alreadyHaveAccount": "すでにアカウントをお持ちですか？",
+        "logIn": "ログイン",
+        "backToHome": "ホームに戻る",
+        "passwordMismatch": "パスワードが一致しません！",
+        "agreeRequired": "利用規約とプライバシーポリシーに同意してください。",
+        "emailExists": "このメールアドレスのアカウントはすでに存在します。",
+        "emailReserved": "このメールアドレスは使用できません。",
+        "accountCreated": "アカウントを作成しました！"
+    }
+}

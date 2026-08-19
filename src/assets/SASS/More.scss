@@ -1,0 +1,236 @@
+.recent-mobile{
+    display: none;
+}
+
+@media (max-width: 767px){
+    .recent-desktop{
+        display: none;
+    }
+
+    .recent-mobile{
+        display: block;
+    }
+
+    .recent-mobile-card{
+        width: 100%;
+    }
+
+    .recent-mobile-thumbnail{
+        width: 150px;
+        height: 150px;
+    }
+
+    .recent-mobile-thumbnail img{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .recent-mobile-content{
+        flex: 1;
+        min-width: 0;
+    }
+
+    .recent-mobile-content h3{
+        line-height: 1.4;
+    }
+
+    .badge-primary{
+        background: #FFC400;
+        color: #111;
+    }
+
+    .badge-outlined{
+        border: 1px solid #FFC400;
+        color: #FFC400;
+    }
+
+    .badge-dark{
+        background: #333;
+        color: white;
+    }
+
+    .tags-group .badge{
+        padding: 7px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+}
+.top-mobile {
+    display: none;
+}
+
+.top-desktop {
+    display: block;
+}
+
+.top-desktop .card {
+    position: relative;
+    overflow: hidden;
+}
+
+.top-mobile-card {
+    width: 100%;
+}
+
+.top-mobile-rank {
+    min-width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5d061;
+    color: #000;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.top-mobile-thumbnail {
+    width: 120px;
+}
+
+.top-mobile-content {
+    min-width: 0;
+    flex: 1;
+}
+
+.top-mobile-content .card-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 767px) {
+    .top-desktop {
+        display: none;
+    }
+
+    .top-mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .top-desktop {
+        display: block;
+    }
+
+    .top-mobile {
+        display: none;
+    }
+}
+.top-desktop {
+    overflow: visible !important;
+    .row {
+        overflow: visible !important;
+    }
+
+    .col-md-6 {
+        overflow: visible !important;
+    }
+}
+.container {
+    .btn{
+        color: #FFC400;
+    }
+    .card{
+        position: relative;
+        overflow: visible !important;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        margin-top: 30px !important;
+        img{
+            max-height: 280px;
+            object-fit: cover;
+        }
+        h5 {
+            display: inline-block;
+            color: #FFC400;
+            border: 1px solid;
+            border-radius: 5px;
+            padding: 8px 8px;
+            font-size: 16px;
+            margin: 0px;
+        }
+        
+        h3{
+            margin: 0px;
+            padding: 0 15px;
+        }
+    }
+    .card:hover{
+        transform: translateY(-8px);
+        box-shadow: 0 0 0 3px #f5d061, 0 8px 20px rgba(245, 208, 97, 0.25);
+    }
+}
+
+.rank-number{
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f5d061;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    transform: translate(-9 0%, -90%);
+    z-index: 10;
+}
+
+
+
+.sort {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 1.5rem auto 2rem;
+
+    button {
+        padding: 8px 18px;
+        border: 1px solid #444;
+        border-radius: 6px;
+        background: #222;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        &:hover {
+            background: #FFC400;
+            border-color: #FFC400;
+            color: #111;
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+}
+
+
+.edit-button{
+    color: black !important;
+    background-color: #FFC400;
+    font-weight: 700;;
+}
+.delete-button{
+    color: white !important;
+    font-weight: 600;
+}
+.admin-section-btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+    }
+}

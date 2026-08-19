@@ -1,0 +1,94 @@
+.footer{
+    background-color: #333333;
+    a {
+        border: none;
+        background: transparent;
+        padding: 0;
+        color: white;
+        text-decoration: none;
+    }
+    .choice{
+        a{
+           &:hover{
+                color: #FFC400;
+                transition: color 0.5s ease;
+            } 
+        }  
+    }
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        a{
+            padding-left: 15px;
+        }
+        transition:
+            opacity .25s ease,
+            transform .25s ease,
+            visibility .25s;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    .information{
+        p, a{
+            font-size: clamp(14px,2vw,16px);
+        }
+        .language{
+            &:hover{
+                color: #FFC400;
+                transition: color 0.5s ease;
+            }
+        }
+        .support{
+           a{
+                display: inline-block;
+                border-radius: 6px;
+                color: black;
+                padding: 10px 60px;
+                background-color: white;
+                font-weight: 700;
+                font-size: 12px;
+                transition: transform 0.2s ease;
+                &:hover {
+                    transform: translateY(-5px);
+                }
+
+            } 
+            .report{
+                background: none;
+                border: 1px solid white;
+                color: white;
+            }
+        }
+        
+         a::after {
+            content: "|";
+            position: absolute;
+            right: -2px;
+            color: #777;
+        }
+        a:last-child::after {
+            content: "";
+        }
+    }
+}
+.address{
+    h1{
+        color: #FFC400;
+    }
+    p{
+        opacity: 0.6;
+    }
+}

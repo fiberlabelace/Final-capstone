@@ -1,0 +1,135 @@
+.category-menu {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+    }
+
+    hr {
+        margin: 0;
+        margin-top: 10px;
+        height: 3px;
+        border: none;
+        background-color: #a5a5a5;
+    }
+}
+
+.category-nav {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.category-links {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: max-content;
+
+    a {
+        position: relative;
+        display: inline-block;
+        padding: 10px 16px;
+        color: white;
+        text-decoration: none;
+        overflow: hidden;
+        z-index: 1;
+        transition: color 0.3s ease;
+        white-space: nowrap;
+        flex-shrink: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #EDC02B;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            transform: scaleX(1);
+        }
+
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+.category {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 45px 0 50px;
+    background: #000;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    z-index: 1000;
+    box-sizing: border-box;
+
+    h5 {
+        color: white;
+        margin: 0 0 20px;
+        font-size: 18px;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 0 20px;
+
+        a {
+            position: relative;
+            display: inline-block;
+            width: fit-content;
+            padding: 6px 10px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #d1d1d1;
+            overflow: hidden;
+            z-index: 1;
+            transition: color 0.3s ease;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: #EDC02B;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s ease;
+                z-index: -1;
+            }
+
+            &:hover::before {
+                transform: scaleX(1);
+            }
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}
+
+.category-menu:hover .category {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

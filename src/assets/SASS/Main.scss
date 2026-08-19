@@ -1,0 +1,68 @@
+.introduction {
+    position: relative;
+    padding: 50px;
+    isolation: isolate;
+    overflow: hidden;
+    .bg-vid{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: .2;
+        z-index: 0;
+        pointer-events: none;
+    }
+    .container{
+        h1{
+            color: #FFC400;
+        }
+    }
+    .quote{
+        border: 3px solid #FFC400;
+        background-color: #00000061;
+        margin-bottom: 60px;
+        padding-bottom: 20px;
+    }
+    h3{
+        margin: 40px 0 20px;
+    }
+    h4{
+        text-align: right;
+        padding-right: 300px;
+    }
+    img{
+        width: clamp(200px,30vw,500px);
+        height: auto;
+        flex-shrink: 0;
+        object-fit: contain;
+    }
+    .statistic{
+        padding: 0 150px;
+        h1{
+            font-size: 60px;
+        }
+        h3{
+            color: white;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .introduction {
+        .statistic {
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            gap: 2rem;
+        }
+        img {
+            width: 80%;
+            max-width: 400px;
+            margin: 0;
+            padding: 0;
+        }
+        h4 {
+            padding-right: 0;
+        }
+    }
+}

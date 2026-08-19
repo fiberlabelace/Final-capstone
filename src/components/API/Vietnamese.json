@@ -1,0 +1,341 @@
+{
+    "categories": {
+        "codeLanguage": "Ngôn ngữ lập trình",
+        "webProgram": "Lập trình Web",
+        "tester": "Tester",
+        "mobileDev": "Phát triển Mobile",
+        "dataAnalyst": "Phân tích dữ liệu",
+        "aiEngineer": "Kỹ sư AI",
+        "devops": "DevOps",
+        "dataScience": "Khoa học dữ liệu",
+        "aiWork": "Công việc AI",
+        "aiOffice": "AI văn phòng"
+    },
+
+    "categoryCourse": {
+        "courseAbout": "Khóa học về {{name}}",
+        "noDescription": "Chưa có mô tả.",
+        "weeks": "Tuần",
+        "enroll": "Đăng ký"
+    },
+
+    "categoryCourses": {
+        "aiEngineer": "Kỹ sư AI",
+        "dataAiAnalyst": "Phân tích dữ liệu/AI",
+        "mlopsCloud": "MLOps/Cloud",
+        "dataPredictAnalyst": "Dự đoán dữ liệu/Phân tích",
+        "masteringAiEngineer": "Chuyên sâu Kỹ sư AI",
+        "masteringDataEngineer": "Chuyên sâu Kỹ sư dữ liệu",
+        "machineLearning": "Machine Learning",
+        "sqlPowerBiEtlPython": "SQL, Power BI, ETL Python",
+        "fullStackDev": "Lập trình Full-stack",
+        "backEndDev": "Lập trình Back-end",
+        "frontEndDev": "Lập trình Front-end",
+        "cloudEngineer": "Kỹ sư Cloud",
+        "devOps": "DevOps",
+        "fullstackWeb": "Lập trình Web Fullstack",
+        "codeArchitecture": "Kiến trúc mã nguồn",
+        "bootcampJavaBackend": "Bootcamp Java Back-end",
+        "mobileAppDev": "Phát triển ứng dụng Mobile",
+        "backendGolang": "Backend Golang"
+    },
+
+    "course": {
+        "noDescription": "Chưa có mô tả.",
+        "programming": "Lập trình",
+        "views": "Lượt xem",
+        "students": "Học viên",
+        "recently": "Gần đây",
+        "instructor": "Giảng viên",
+        "unknown": "Không xác định",
+        "alreadyPurchased": "Đã mua",
+        "purchaseCourse": "Mua khóa học"
+    },
+
+    "common": {
+        "loading": "Đang tải..."
+    },
+
+    "address": {
+        "hoChiMinhCity": "Thành phố Hồ Chí Minh",
+        "daNang": "Đà Nẵng",
+        "headquarter": "Trụ sở chính",
+        "hotline": "Đường dây nóng",
+        "address": "Địa chỉ",
+        "district": "Quận",
+        "city": "Thành phố",
+        "floor": "Tầng",
+        "ward": "Phường"
+    },
+
+    "header": {
+        "language": "Ngôn ngữ",
+        "toggleNavigation": "Bật/tắt điều hướng",
+        "search": "Tìm kiếm khóa học",
+        "cart": "Giỏ hàng",
+        "hello": "Xin chào",
+        "adminPanel": "Bảng quản trị",
+        "logOut": "Đăng xuất",
+        "signUp": "Đăng ký",
+        "close": "Đóng"
+    },
+
+    "cart": {
+        "shoppingCart": "Giỏ hàng",
+        "delete": "Xóa",
+        "payment": "Thanh toán",
+        "deleteAll": "Xóa tất cả",
+        "noCoursesWaiting": "Không có khóa học nào đang chờ thanh toán.",
+        "myCourses": "Khóa học của tôi",
+        "noEnrolledCourses": "Bạn chưa đăng ký khóa học nào."
+    },
+
+    "shortcuts": {
+        "backend": "Lập trình Backend",
+        "webDesign": "Thiết kế Web",
+        "mobileDev": "Phát triển Mobile",
+        "frontend": "Lập trình Front-end",
+        "fullStack": "Lập trình Full Stack",
+        "programmingThinking": "Tư duy lập trình"
+    },
+
+    "footer": {
+        "language": "Ngôn ngữ",
+        "notice": "Thông báo",
+        "termsOfUse": "Điều khoản sử dụng",
+        "privacyPolicy": "Chính sách quyền riêng tư",
+        "faq": "Câu hỏi thường gặp",
+        "refund": "Hoàn tiền",
+        "cookiePolicy": "Chính sách Cookie",
+        "changingCookieSettings": "Thay đổi cài đặt Cookie",
+        "copyright": "2026 | Được xây dựng bởi Trần Minh Khôi"
+    },
+
+    "information": {
+        "refund": "Hoàn tiền",
+        "helpCenter": "Trung tâm trợ giúp",
+        "site": "Trang web",
+        "contact": "LIÊN HỆ",
+        "reportInfringement": "Báo cáo vi phạm",
+        "protectIP": "cùng Coloso để bảo vệ quyền sở hữu trí tuệ của chúng tôi."
+    },
+
+    "carousel": {
+        "previous": "Trước",
+        "next": "Tiếp theo"
+    },
+
+    "languagePages": {
+        "python": "Python",
+        "java": "Java",
+        "other": "Ngôn ngữ khác",
+        "otherShort": "Khác",
+        "viewMore": "Xem thêm"
+    },
+
+    "adminCourses": {
+        "title": "Khóa học Admin",
+        "adminCourse": "Khóa học Admin",
+        "weeks": "{{count}} Tuần",
+        "recentlyAdded": "Mới được thêm",
+        "enroll": "Đăng ký",
+        "viewMore": "xem thêm →",
+        "noCourses": "Chưa có khóa học nào được Admin thêm."
+    },
+
+    "introduction": {
+        "title": "CYBERSOFT - Đào tạo lập trình theo dự án",
+        "description": "CyberSoft Academy là một trong những đơn vị tiên phong tại Việt Nam áp dụng phương pháp Active Learning và Flipped Learning thông qua các dự án thực tế trong đào tạo CNTT. Học viên đảm nhận vai trò thành viên Scrum trong môi trường Agile, từng bước phát triển thành những lập trình viên chuyên nghiệp có khả năng đáp ứng nhu cầu tuyển dụng của doanh nghiệp.",
+        "ceo": "- CEO CYBERSOFT",
+        "center": "Trung tâm",
+        "students": "Học viên",
+        "collaborators": "Cộng tác viên"
+    },
+
+    "recently": {
+        "title": "Khóa học mới cập nhật",
+        "programming": "Lập trình",
+        "weeks": "{{count}} Tuần",
+        "enroll": "Đăng ký",
+        "viewMore": "xem thêm →"
+    },
+
+    "top": {
+        "title": "TOP 10 hôm nay",
+        "programming": "Lập trình",
+        "viewMore": "xem thêm →"
+    },
+
+    "javaCourses": {
+        "title": "KHÓA HỌC JAVA",
+        "java": "Java",
+        "unknown": "Không xác định",
+        "weeks": "{{count}} Tuần",
+        "enroll": "Đăng ký"
+    },
+
+    "pythonCourses": {
+        "title": "KHÓA HỌC PYTHON",
+        "python": "Python",
+        "unknown": "Không xác định",
+        "weeks": "{{count}} Tuần",
+        "enroll": "Đăng ký"
+    },
+
+    "otherCourses": {
+        "title": "CÁC KHÓA HỌC KHÁC",
+        "programming": "Lập trình",
+        "unknown": "Không xác định",
+        "weeks": "{{count}} Tuần",
+        "enroll": "Đăng ký"
+    },
+
+    "recentlyMore": {
+        "title": "MỚI ĐƯỢC THÊM",
+        "newest": "Mới nhất",
+        "oldest": "Cũ nhất",
+        "programming": "Lập trình",
+        "weeks": "{{count}} Tuần",
+        "enroll": "Đăng ký",
+        "unknown": "Không xác định"
+    },
+
+    "topMore": {
+        "title": "ĐƯỢC HỌC VIÊN LỰA CHỌN NHIỀU NHẤT",
+        "programming": "Lập trình",
+        "weeks": "{{count}} Tuần",
+        "enroll": "Đăng ký",
+        "unknown": "Không xác định"
+    },
+
+    "admin": {
+        "addNewCourse": "Thêm khóa học mới",
+        "courseName": "Tên khóa học",
+        "courseSlug": "Slug khóa học",
+        "imageUrl": "URL hình ảnh",
+        "category": "Danh mục",
+        "description": "Mô tả",
+        "price": "Giá",
+        "addCourse": "Thêm khóa học",
+        "courseNamePlaceholder": "React Development",
+        "courseSlugPlaceholder": "react-development",
+        "imageUrlPlaceholder": "https://...",
+        "categoryPlaceholder": "Web Development",
+        "descriptionPlaceholder": "Mô tả khóa học...",
+        "pricePlaceholder": "50",
+        "courseNameSlugRequired": "Tên khóa học và slug là bắt buộc.",
+        "slugExists": "Một khóa học với slug này đã tồn tại.",
+        "courseAdded": "Thêm khóa học thành công!",
+        "adminPanel": "Bảng quản trị",
+        "welcome": "Chào mừng",
+        "addCourses": "Thêm khóa học",
+        "addCoursesDescription": "Thêm khóa học mới vào website.",
+        "removeCourses": "Xóa khóa học",
+        "removeCoursesDescription": "Xóa các khóa học hiện có khỏi website.",
+        "manageUsers": "Quản lý người dùng",
+        "manageUsersDescription": "Xem và quản lý tài khoản.",
+        "editUser": "Chỉnh sửa người dùng",
+        "saveChanges": "Lưu thay đổi",
+        "cancel": "Hủy",
+        "name": "Tên",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "role": "Vai trò",
+        "action": "Thao tác",
+        "edit": "Chỉnh sửa",
+        "delete": "Xóa",
+        "noRegisteredUsers": "Không có người dùng đã đăng ký.",
+        "userFieldsRequired": "Tên, email và mật khẩu không được để trống.",
+        "emailExists": "Email này đã được người dùng khác sử dụng.",
+        "reservedEmail": "Email này được dành riêng cho tài khoản quản trị viên.",
+        "userUpdated": "Cập nhật thông tin người dùng thành công.",
+        "deleteConfirmation": "Bạn có chắc chắn muốn xóa {{email}} không?",
+        "removeCoursesDescriptionFull": "Danh sách này chứa tất cả các khóa học hiện đang hiển thị trên website.",
+        "removeCourse": "Xóa khóa học",
+        "courseRemoved": "Xóa khóa học thành công!",
+        "confirmRemoveCourse": "Bạn có chắc chắn muốn xóa \"{{course}}\" không?",
+        "noCoursesAvailable": "Không có khóa học nào."
+    },
+
+    "courses": {
+        "javaCourses": "KHÓA HỌC JAVA",
+        "pythonCourses": "KHÓA HỌC PYTHON",
+        "otherCourses": "CÁC KHÓA HỌC KHÁC",
+        "programming": "Lập trình",
+        "java": "Java",
+        "unknown": "Không xác định",
+        "weeks": "{{count}} Tuần",
+        "defaultWeeks": "12 Tuần",
+        "enroll": "Đăng ký",
+        "recentlyAdded": "MỚI ĐƯỢC THÊM",
+        "newest": "Mới nhất",
+        "oldest": "Cũ nhất",
+        "topPicked": "ĐƯỢC HỌC VIÊN LỰA CHỌN NHIỀU NHẤT"
+    },
+
+    "login": {
+        "welcomeBack": "Chào mừng trở lại!",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "emailPlaceholder": "Nhập email của bạn",
+        "passwordPlaceholder": "Nhập mật khẩu của bạn",
+        "logIn": "Đăng nhập",
+        "newUser": "Người dùng mới?",
+        "signUp": "Đăng ký",
+        "backToHome": "Quay lại trang chủ",
+        "incorrectCredentials": "Email hoặc mật khẩu không chính xác."
+    },
+
+    "payment": {
+        "payment": "THANH TOÁN",
+        "cartEmpty": "Giỏ hàng của bạn đang trống",
+        "addCourseBeforePayment": "Hãy thêm khóa học vào giỏ hàng trước khi thanh toán.",
+        "browseCourses": "Xem khóa học",
+        "paymentInformation": "Thông tin thanh toán",
+        "card": "Thẻ",
+        "cardNumber": "Số thẻ",
+        "cardholderName": "Tên chủ thẻ",
+        "yourName": "Tên của bạn",
+        "expiryDate": "Ngày hết hạn",
+        "paypalRedirect": "Bạn sẽ được chuyển hướng đến PayPal để hoàn tất thanh toán.",
+        "pay": "Thanh toán",
+        "orderSummary": "Tóm tắt đơn hàng",
+        "courses": "Khóa học",
+        "subtotal": "Tạm tính",
+        "discount": "Giảm giá",
+        "total": "Tổng cộng",
+        "paymentSuccessful": "Thanh toán thành công!"
+    },
+    "search": {
+        "loading": "Đang tải khóa học...",
+        "resultsFor": "Kết quả tìm kiếm cho \"{{query}}\"",
+        "coursesFound_one": "Tìm thấy {{count}} khóa học",
+        "coursesFound_other": "Tìm thấy {{count}} khóa học",
+        "noCoursesFound": "Không tìm thấy khóa học nào",
+        "noCoursesMatching": "Không tìm thấy khóa học nào phù hợp với \"{{query}}\".",
+        "interestedCourses": "Các khóa học bạn có thể quan tâm",
+        "relatedCourses": "Các khóa học liên quan bạn có thể quan tâm",
+        "enroll": "Đăng ký"
+    },
+    "signup": {
+        "createAccount": "Tạo tài khoản của bạn",
+        "fullName": "Họ và tên",
+        "fullNamePlaceholder": "Nhập họ và tên của bạn",
+        "email": "Email",
+        "emailPlaceholder": "Nhập email của bạn",
+        "password": "Mật khẩu",
+        "passwordPlaceholder": "Nhập mật khẩu của bạn",
+        "confirmPassword": "Xác nhận mật khẩu",
+        "confirmPasswordPlaceholder": "Xác nhận mật khẩu của bạn",
+        "agreeTerms": "Tôi đồng ý với Điều khoản dịch vụ và Chính sách quyền riêng tư",
+        "signUp": "Đăng ký",
+        "alreadyHaveAccount": "Bạn đã có tài khoản?",
+        "logIn": "Đăng nhập",
+        "backToHome": "Quay lại trang chủ",
+        "passwordMismatch": "Mật khẩu không khớp!",
+        "agreeRequired": "Vui lòng đồng ý với Điều khoản dịch vụ và Chính sách quyền riêng tư.",
+        "emailExists": "Tài khoản với email này đã tồn tại.",
+        "emailReserved": "Email này được dành riêng.",
+        "accountCreated": "Tạo tài khoản thành công!"
+    }
+}

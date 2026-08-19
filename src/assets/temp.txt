@@ -1,0 +1,81 @@
+.food-section {
+  background-color: $bg-dark;
+  max-width: 650px;
+  border-radius: 12px;
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .food-card {
+    .card-thumbnail {
+      width: 130px;
+      height: 130px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .badge-overlay {
+        width: 32px;
+        height: 32px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    .card-title {
+      line-height: 1.35;
+      color: #ffffff;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: lighten($accent-pink, 10%);
+      }
+    }
+
+    .card-author {
+      font-size: 0.875rem;
+      color: $text-muted !important;
+    }
+  }
+
+  // Badges Styling
+  .badge {
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 0.4em 0.65em;
+    border-radius: 4px;
+
+    &-primary {
+      background-color: $accent-pink;
+      color: #ffffff;
+    }
+
+    &-outlined {
+      background-color: transparent;
+      border: 1px solid $accent-pink;
+      color: $accent-pink;
+    }
+
+    &-dark {
+      background-color: $badge-dark-bg;
+      color: #e1e1e6;
+    }
+  }
+
+  // Footer Link
+  .view-more-link {
+    color: $accent-pink;
+    font-size: 0.95rem;
+
+    &:hover {
+      color: lighten($accent-pink, 10%);
+      text-decoration: underline !important;
+    }
+  }
+}   

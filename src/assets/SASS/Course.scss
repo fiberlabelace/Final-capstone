@@ -1,0 +1,65 @@
+.course-purchase-btn {
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    background: #FFC400;
+    color: #111;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    &:hover:not(:disabled) {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(255, 196, 0, 0.25);
+        background: #ffd43b;
+    }
+
+    &:active:not(:disabled) {
+        transform: translateY(-1px);
+    }
+
+    &:disabled {
+        cursor: default;
+    }
+
+    &.purchased {
+        background: #e9e9e9;
+        color: #555;
+        box-shadow: none;
+    }
+}
+.category-course {
+    margin-bottom: 80px;
+
+    .card {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 0 3px #f5d061, 0 8px 20px rgba(245, 208, 97, 0.25);
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            color: #fff;
+        }
+
+        .card-text {
+            color: #aaa;
+        }
+    }
+}
