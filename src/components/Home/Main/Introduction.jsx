@@ -21,7 +21,7 @@ const Introduction = () => {
             </div>
 
             <div className="d-flex justify-content-between container statistic">
-                <img src="./public/map.png" />
+                <img src="/map.png" />
 
                 <div className="text-center">
                     <h1>7</h1>
