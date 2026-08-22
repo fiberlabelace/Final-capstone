@@ -202,3 +202,13 @@
         transform: translateY(-1px);
     }
 }
+
+/* Allow Swiper slides and wrappers to show hover shadows outside bounds */
+.swiper, .swiper-wrapper, .swiper-slide {
+  overflow: visible !important;
+}
+
+/* Ensure cards inside main sections are visible outside their containers */
+.container .card {
+  overflow: visible !important;
+}
