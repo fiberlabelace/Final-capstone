@@ -21,9 +21,9 @@ const Information= ()=> {
                 </div>
             </div>
             <div className="d-flex flex-column flex-md-row align-items-center gap-3 support">
-                <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+                <a href="https://mail.google.com/" target="_blank" onClick={() => window.scrollTo(0, 0)}>
                     {t("information.contact")}
-                </Link>
+                </a>
                 <Link to="/" onClick={() => window.scrollTo(0, 0)} className='report'>
                     {t("information.reportInfringement")}
                 </Link>
