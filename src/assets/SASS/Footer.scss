@@ -18,7 +18,6 @@
     .dropdown {
         position: relative;
     }
-
     .dropdown-menu {
         position: absolute;
         top: 50%;
@@ -35,7 +34,6 @@
             transform .25s ease,
             visibility .25s;
     }
-
     .dropdown:hover .dropdown-menu {
         opacity: 1;
         visibility: visible;
@@ -71,8 +69,7 @@
                 border: 1px solid white;
                 color: white;
             }
-        }
-        
+        }      
          a::after {
             content: "|";
             position: absolute;

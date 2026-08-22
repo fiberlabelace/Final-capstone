@@ -1,6 +1,5 @@
 .navbar {
     background-color: black;
-
     .container {
         padding-left: 3vw;
         padding-right: 3vw;
@@ -13,7 +12,6 @@
     .navbar-nav {
         .nav-link {
             transition: transform 0.2s ease;
-
             &:hover {
                 transform: translateY(-5px);
             }
@@ -22,16 +20,13 @@
     .navbar-brand, .nav-link {
         color: white;
     }
-
     .form-control::placeholder {
         color: #6c6c6c;
         opacity: 1;
     }
-
     .nav-item.dropdown {
         position: relative;
     }
-
     .dropdown-menu {
         position: absolute;
         left: 35%;
@@ -44,7 +39,6 @@
         transform: translateY(10px);
         transition: opacity .25s ease, transform .25s ease, visibility 0s linear .25s;
     }
-
     .nav-item.dropdown:hover .dropdown-menu {
         opacity: 1;
         visibility: visible;
@@ -121,59 +115,46 @@
 .offcanvas {
     background-color: #18181b;
     color: white;
-
     .offcanvas-header {
         border-bottom: 1px solid #333;
-
         .offcanvas-title {
             color: white;
         }
-
         .btn-close {
             filter: invert(1);
         }
     }
-
     .offcanvas-body {
         color: white;
-
         .cart-list {
             color: white;
-
             p {
                 color: #999 !important;
             }
-
             hr {
                 border-color: #444;
                 opacity: 1;
             }
-
             h5 {
                 color: white;
             }
-
             .cart-item {
                 width: 100%;
                 padding: 15px;
                 background-color: #252529;
                 border-radius: 8px;
                 color: white;
-
                 h6 {
                     margin: 0 0 5px;
                     color: white !important;
                 }
-
                 small {
                     color: #999 !important;
                 }
             }
-
             a {
                 color: white;
                 text-decoration: none;
-
                 &:hover {
                     color: white;
                 }

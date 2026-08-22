@@ -32,7 +32,6 @@ const Course = ()=> {
     const [course, setCourse] = useState(null);
     const [purchased, setPurchased] = useState(false);
     const [price, setPrice] = useState(0);
-
     useEffect(() => {
         axios.get(
             "https://elearningnew.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01",
@@ -47,7 +46,6 @@ const Course = ()=> {
             const foundCourse = courses.find(
                 (item) => item.biDanh === courseName
             );
-
             if (foundCourse){
                 setCourse(foundCourse);
             }
@@ -70,12 +68,10 @@ const Course = ()=> {
             console.log("DATA:", err.response?.data);
         });
     }, [courseName, t]);
-
     useEffect(() => {
         if (!course) {return;}
         const prices = JSON.parse(localStorage.getItem("coursePrices")) || {};
         let coursePrice = prices[course.biDanh];
-
         if(!coursePrice){
             coursePrice = Math.floor(Math.random() * 81) + 20;
             prices[course.biDanh] = coursePrice;
@@ -84,7 +80,6 @@ const Course = ()=> {
                 JSON.stringify(prices)
             );
         }
-
         setPrice(coursePrice);
         const checkCourseStatus = () => {
             const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -97,7 +92,6 @@ const Course = ()=> {
             );
             setPurchased(alreadyInCart || alreadyRegistered);
         };
-
         checkCourseStatus();
         window.addEventListener("cartUpdated", checkCourseStatus);
         window.addEventListener("registeredUpdated", checkCourseStatus);
@@ -106,12 +100,10 @@ const Course = ()=> {
             window.removeEventListener("registeredUpdated", checkCourseStatus);
         };
     }, [course]);
-
     const purchaseCourse = () => {
         if (!course || purchased){
             return;
         }
-
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
         const registeredCourses = JSON.parse(localStorage.getItem("registeredCourses")) || [];
         const alreadyInCart = cart.some(
@@ -138,7 +130,6 @@ const Course = ()=> {
             new Event("cartUpdated")
         );
     };
-
     if (!course) {
         return (
             <div>
@@ -150,7 +141,6 @@ const Course = ()=> {
             </div>
         );
     }
-
     return (
         <div>
             <Header />
@@ -205,5 +195,4 @@ const Course = ()=> {
         </div>
     );
 };
-
 export default Course
