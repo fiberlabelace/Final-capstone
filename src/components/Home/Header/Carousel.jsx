@@ -1,10 +1,10 @@
-import React from 'react'
-import { useTranslation } from "react-i18next"
-
+import React from 'react';
+import { useTranslation } from "react-i18next";
 const Carousel = () => {
-    const { t } = useTranslation()
-    return (
-        <div>
+  const {
+    t
+  } = useTranslation();
+  return <div>
             <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active" data-bs-interval="3000">
@@ -26,8 +26,6 @@ const Carousel = () => {
                     <span className="visually-hidden">{t("carousel.next")}</span>
                 </button>
             </div>
-        </div>
-    )
-}
-
-export default Carousel
+        </div>;
+};
+export default Carousel;

@@ -1,10 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-
 const Introduction = () => {
-    const { t } = useTranslation();
-    return (
-        <div className="introduction">
+  const {
+    t
+  } = useTranslation();
+  return <div className="introduction">
             <video className="bg-vid" autoPlay loop muted>
                 <source src="./background-video.mp4" type="video/mp4" />
             </video>
@@ -26,8 +26,6 @@ const Introduction = () => {
                     <h3>{t("introduction.collaborators")}</h3>
                 </div>
             </div>
-        </div>
-    );
+        </div>;
 };
-
 export default Introduction;

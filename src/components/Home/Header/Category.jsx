@@ -1,31 +1,19 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { useTranslation } from "react-i18next"
-
-const sections = [
-    ["web-program", "webProgram"],
-    ["tester", "tester"],
-    ["mobile-dev", "mobileDev"],
-    ["data-analyst", "dataAnalyst"],
-    ["ai-engineer", "aiEngineer"],
-    ["devops", "devops"],
-    ["data-science", "dataScience"],
-    ["ai-work", "aiWork"],
-    ["ai-office", "aiOffice"]
-]
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+const sections = [["web-program", "webProgram"], ["tester", "tester"], ["mobile-dev", "mobileDev"], ["data-analyst", "dataAnalyst"], ["ai-engineer", "aiEngineer"], ["devops", "devops"], ["data-science", "dataScience"], ["ai-work", "aiWork"], ["ai-office", "aiOffice"]];
 const Category = () => {
-    const { t } = useTranslation()
-    return (
-        <div className="category-menu pt-2">
+  const {
+    t
+  } = useTranslation();
+  return <div className="category-menu pt-2">
             <div className="container">
                 <div className="category-nav">
                     <div className="category-links">
                         <Link to="/code-language">☰ [ {t("categories.codeLanguage")} ]</Link>
-                        {sections.map(([name, label]) => (
-                            <Link key={name} to={`/category-course/${name}`}>
+                        {sections.map(([name, label]) => <Link key={name} to={`/category-course/${name}`}>
                                 {t(`categories.${label}`)}
-                            </Link>
-                        ))}
+                            </Link>)}
                     </div>
                 </div>
             </div>
@@ -72,8 +60,6 @@ const Category = () => {
                 </div>
             </div>
             <hr />
-        </div>
-    )
-}
-
-export default Category
+        </div>;
+};
+export default Category;

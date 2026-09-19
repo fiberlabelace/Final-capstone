@@ -1,10 +1,10 @@
-import React from 'react'
-import { useTranslation } from "react-i18next"
-
+import React from 'react';
+import { useTranslation } from "react-i18next";
 const Address = () => {
-    const {t} = useTranslation()
-    return (
-        <div>
+  const {
+    t
+  } = useTranslation();
+  return <div>
             <div className="address container my-5">
                 <h1>{t("address.hoChiMinhCity")}</h1>
                 <div className="row g-4">
@@ -50,8 +50,6 @@ const Address = () => {
                     </div>
                 </div>
             </div>
-        </div>
-    )
-}
-
-export default Address
+        </div>;
+};
+export default Address;

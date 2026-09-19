@@ -1,17 +1,20 @@
-import React from 'react'
-import Information from './Information'
-import Address from './Address'
-import "bootstrap-icons/font/bootstrap-icons.css"
-import { Link } from 'react-router-dom'
-import { useTranslation } from "react-i18next"
-
-const Footer =() => {
-    const { t, i18n} = useTranslation()
-    return (
-        <div className='footer'>
+import React from 'react';
+import Information from './Information';
+import Address from './Address';
+import "bootstrap-icons/font/bootstrap-icons.css";
+import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+const Footer = () => {
+  const {
+    t,
+    i18n
+  } = useTranslation();
+  return <div className='footer'>
             <div className='container pt-5'>
                 <div className='d-flex justify-content-between'>
-                    <img src='/logo.png' className="mb-4" style={{ maxHeight: "50px" }} />
+                    <img src='/logo.png' className="mb-4" style={{
+          maxHeight: "50px"
+        }} />
                     <div className='dropdown'>
                         <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i className="bi bi-globe pe-1"></i>
@@ -67,8 +70,6 @@ const Footer =() => {
                     </div>
                 </div>
             </div>
-        </div>
-    )
-}
-
-export default Footer
+        </div>;
+};
+export default Footer;
