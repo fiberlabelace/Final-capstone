@@ -56,25 +56,49 @@ function Top() {
       }
     }}>
                 {courses.map(course => <SwiperSlide key={course.maKhoaHoc}>
-                        <Link to={`/${course.biDanh}`} className="mx-auto m-5 text-decoration-none" style={{
-          maxWidth: "500px"
-        }}>
-                            <div className="card">
-                                <img src={course.hinhAnh} className="card-img-top" alt={course.tenKhoaHoc} onError={e => {
-              e.currentTarget.src = `https://picsum.photos/seed/${course.maKhoaHoc}/180/400`;
-            }} />
-                                <div className="card-body">
-                                    <h5 className="card-title">
-                                        {course.danhMucKhoaHoc?.tenDanhMucKhoaHoc || t("top.programming")}
-                                    </h5>
-                                    <hr />
-                                    <h3 className="card-title">
-                                        {course.tenKhoaHoc}
-                                    </h3>
-                                </div>
-                            </div>
-                        </Link>
-                    </SwiperSlide>)}
+  <Link
+    to={`/${course.biDanh}`}
+    className="mx-auto m-5 text-decoration-none"
+    style={{
+      maxWidth: "500px",
+      display: "block",
+      height: "100%"
+    }}
+  >
+    <div
+      className="card"
+      style={{
+        height: "450px"
+      }}
+    >
+      <img
+        src={course.hinhAnh}
+        className="card-img-top"
+        alt={course.tenKhoaHoc}
+        style={{
+          height: "250px",
+          objectFit: "cover"
+        }}
+        onError={e => {
+          e.currentTarget.src = `https://picsum.photos/seed/${course.maKhoaHoc}/500/250`;
+        }}
+      />
+
+      <div className="card-body">
+        <h5 className="card-title">
+          {course.danhMucKhoaHoc?.tenDanhMucKhoaHoc ||
+            t("top.programming")}
+        </h5>
+
+        <hr />
+
+        <h3 className="card-title">
+          {course.tenKhoaHoc}
+        </h3>
+      </div>
+    </div>
+  </Link>
+</SwiperSlide>)}
             </Swiper>
             <div className="d-flex justify-content-end">
                 <Link to="/top" className="btn d-flex justify-content-end">
