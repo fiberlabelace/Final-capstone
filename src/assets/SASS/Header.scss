@@ -17,8 +17,13 @@
             }
         }
     }
-    .navbar-brand, .nav-link {
-        color: var(--text);
+    .navbar-brand,
+    .nav-link,
+    .nav-link:hover,
+    .nav-link:focus,
+    .nav-link:active,
+    .nav-link.show {
+        color: var(--text) !important;
     }
     .form-control::placeholder {
         color: #6c6c6c;
