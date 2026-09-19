@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './components/Home/Home'
 import RecentlyMore from './components/More/RecentlyMore'
@@ -15,6 +15,7 @@ import Search from './components/User/Search'
 import Admin from "./components/User/Admin/Admin";
 
 const App = () => {
+    const [darkMode, setDarkMode] = useState(true)
     return (
         <Routes>
             <Route path="/" element={<Home/>}/>

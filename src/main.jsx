@@ -10,6 +10,7 @@ import { initReactI18next, I18nextProvider } from "react-i18next";
 import en from "./components/API/English.json";
 import vi from "./components/API/Vietnamese.json";
 import ja from "./components/API/Japanese.json";
+import {Theme} from "./components/Effect/Theme";
 
 i18next
     .use(initReactI18next)
@@ -29,8 +30,10 @@ i18next
 createRoot(document.getElementById("root")).render(
     <I18nextProvider i18n={i18next}>
         <BrowserRouter>
-            <ScrollTop />
-            <App />
+            <Theme>
+                <ScrollTop/>
+                <App/>
+            </Theme>
         </BrowserRouter>
     </I18nextProvider>
 );

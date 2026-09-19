@@ -20,7 +20,7 @@
     }
     .quote{
         border: 3px solid #FFC400;
-        background-color: #00000061;
+        background-color: var(--overlay-bg);
         margin-bottom: 60px;
         padding-bottom: 20px;
     }
@@ -43,7 +43,7 @@
             font-size: 60px;
         }
         h3{
-            color: white;
+            color: var(--text);
         }
     }
 }

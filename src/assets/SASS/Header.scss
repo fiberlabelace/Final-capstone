@@ -1,5 +1,5 @@
 .navbar {
-    background-color: black;
+    background-color: var(--surface);
     .container {
         padding-left: 3vw;
         padding-right: 3vw;
@@ -18,7 +18,7 @@
         }
     }
     .navbar-brand, .nav-link {
-        color: white;
+        color: var(--text);
     }
     .form-control::placeholder {
         color: #6c6c6c;
@@ -112,53 +112,55 @@
         }
     }
 }
-.offcanvas {
-    background-color: #18181b;
-    color: white;
+.offcanvas{
+    background-color: var(--surface);
+    color: var(--text);
     .offcanvas-header {
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid var(--border);
         .offcanvas-title {
-            color: white;
+            color: var(--text);
         }
         .btn-close {
-            filter: invert(1);
+            filter: none;
         }
     }
     .offcanvas-body {
-        color: white;
+        color: var(--text);
+
         .cart-list {
-            color: white;
+            color: var(--text);
+
             p {
-                color: #999 !important;
+                color: var(--text-secondary) !important;
             }
+
             hr {
-                border-color: #444;
-                opacity: 1;
+                border-color: var(--border);
             }
+
             h5 {
-                color: white;
+                color: var(--text);
             }
+
             .cart-item {
-                width: 100%;
-                padding: 15px;
-                background-color: #252529;
-                border-radius: 8px;
-                color: white;
+                background-color: var(--surface-2);
+                color: var(--text);
+
                 h6 {
-                    margin: 0 0 5px;
-                    color: white !important;
+                    color: var(--text) !important;
                 }
+
                 small {
-                    color: #999 !important;
+                    color: var(--text-secondary) !important;
                 }
             }
+
             a {
-                color: white;
-                text-decoration: none;
-                &:hover {
-                    color: white;
-                }
+                color: var(--text);
             }
         }
     }
+}
+.dark-mode .btn-close {
+    filter: invert(1);
 }

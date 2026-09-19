@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Category from './Category'
 import { useTranslation } from "react-i18next";
+import { useTheme } from "../../Effect/Theme.jsx";
 
 const Menu = () => {
     const [cartNotification, setCartNotification] = useState(0);
@@ -11,6 +12,7 @@ const Menu = () => {
     const navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState("");
     const { t, i18n } = useTranslation();
+    const { darkMode, toggleTheme } = useTheme();
     useEffect(() => {
         const loadCart = () => {
             const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -71,7 +73,7 @@ const Menu = () => {
             <nav className="navbar navbar-expand-lg">
                 <div className="container">
                     <Link to="/">
-                        <img className="me-4" src="/logo.png" style={{ maxHeight: "50px" }} />
+                        <img className="me-4" src={darkMode ? "/logo.png" : "/logo_dark.png"} style={{ maxHeight: darkMode ? "50px" : "60px" }} />
                     </Link>
                     <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label={t("header.toggleNavigation")}>
                         <span className="navbar-toggler-icon" />
@@ -155,6 +157,12 @@ const Menu = () => {
                                         </button>
                                     </li>
                                 </ul>
+                            </li>
+                            <li className="nav-item">
+                                <button type="button" className="nav-link" onClick={toggleTheme}>
+                                    <i className={`bi ${darkMode ? "bi-sun" : "bi-moon"} pe-1`}></i>
+                                    {darkMode ? "Light" : "Dark"}
+                                </button>
                             </li>
                         </ul>
                     </div>
