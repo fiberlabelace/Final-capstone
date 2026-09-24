@@ -114,7 +114,15 @@ function Recently() {
 
                   <hr />
 
-                  <h3 className="card-title">
+                  <h3
+                    className="card-title"
+                    style={{
+                      display: "-webkit-box",
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: "vertical",
+                      overflow: "hidden"
+                    }}
+                  >
                     {course.tenKhoaHoc}
                   </h3>
                 </div>
