@@ -16,14 +16,18 @@ const Search = () => {
   const [courses, setCourses] = useState([]);
   const [relatedCourses, setRelatedCourses] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const coursesPerPage = 6;
+  const totalPages = Math.ceil(courses.length / coursesPerPage);
+  const currentCourses = courses.slice((currentPage - 1) * coursesPerPage, currentPage * coursesPerPage);
   useEffect(() => {
     const loadCourses = async () => {
       setLoading(true);
       try {
         const res = await axios.get("https://elearningnew.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01", {
           headers: {
-            TokenCybersoft: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJCb290Y2FtcCA5MyIsIkhldEhhblN0cmluZyI6IjExLzEyLzIwMjYiLCJIZXRIYW5UaW1lIjoiMTc5Njk0NzIwMDAwMCIsIm5iZiI6MTc2Nzk3ODAwMCwiZXhwIjoxNzk3MDk0ODAwfQ.nooPjcX2NT2qTi3ew-Ov-Ki_PNodbk6OGwbQ3XdIUQg"
-          }
+            TokenCybersoft: import.meta.env.VITE_CYBERSOFT_TOKEN
+        }
         });
         const allCourses = res.data || [];
         const searchText = normalizeText(query);
@@ -40,6 +44,7 @@ const Search = () => {
           return;
         }
         setCourses(filteredCourses);
+        setCurrentPage(1);
       } catch (err) {
         console.log("STATUS:", err.response?.status);
         console.log("DATA:", err.response?.data);
@@ -68,7 +73,7 @@ const Search = () => {
           })}
                         </h3>
                         <div className="row g-4">
-                            {courses.map(course => <div className="col-md-6 col-lg-4" key={course.maKhoaHoc}>
+                            {currentCourses.map(course => <div className="col-md-6 col-lg-4" key={course.maKhoaHoc}>
                                     <Link to={`/${course.biDanh}`} className="text-decoration-none">
                                         <div className="card h-100">
                                             <img src={course.hinhAnh} className="card-img-top" alt={course.tenKhoaHoc} onError={e => {
@@ -93,6 +98,11 @@ const Search = () => {
                                     </Link>
                                 </div>)}
                         </div>
+                        {totalPages > 1 && <div className="d-flex justify-content-center gap-2 mt-5">
+                            {Array.from({ length: totalPages }, (_, index) => <button key={index + 1} onClick={() => setCurrentPage(index + 1)} className={`btn ${currentPage === index + 1 ? "btn-warning text-dark" : "btn-outline-warning"}`}>
+                                {index + 1}
+                            </button>)}
+                        </div>}
                     </> : <>
                         {query.trim() && <div className="text-center py-5">
                                 <i className="bi bi-search" style={{
@@ -147,4 +157,4 @@ const Search = () => {
             <Footer />
         </div>;
 };
-export default Search;
+export default Search

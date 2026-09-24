@@ -8,6 +8,10 @@ import { useTranslation } from "react-i18next";
 const JavaMore = () => {
   const [courses, setCourses] = useState([]);
   const { t } = useTranslation();
+  const [currentPage, setCurrentPage] = useState(1);
+  const coursesPerPage = 12;
+  const totalPages = Math.ceil(courses.length / coursesPerPage);
+  const currentCourses = courses.slice((currentPage - 1) * coursesPerPage, currentPage * coursesPerPage);
 
   useEffect(() => {
     axios
@@ -16,7 +20,7 @@ const JavaMore = () => {
         {
           headers: {
             TokenCybersoft:
-              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJCb290Y2FtcCA5MyIsIkhldEhhblN0cmluZyI6IjExLzEyLzIwMjYiLCJIZXRIYW5UaW1lIjoiMTc5Njk0NzIwMDAwMCIsIm5iZiI6MTc2Nzk3ODAwMCwiZXhwIjoxNzk3MDk0ODAwfQ.nooPjcX2NTq2Ti3ew-Ov-Ki_PNodbk6OGwbQ3XdIUQg"
+              import.meta.env.VITE_CYBERSOFT_TOKEN
           }
         }
       )
@@ -72,7 +76,7 @@ const JavaMore = () => {
 
       <div className="container mb-5 pb-5">
         <div className="row g-4">
-          {courses.map(course => (
+          {currentCourses.map(course => (
             <div
               className="col-md-6 col-lg-4"
               key={course.maKhoaHoc}
@@ -146,6 +150,12 @@ const JavaMore = () => {
             </div>
           ))}
         </div>
+
+        {totalPages > 1 && <div className="d-flex justify-content-center gap-2 mt-5">
+          {Array.from({ length: totalPages }, (_, index) => <button key={index + 1} onClick={() => setCurrentPage(index + 1)} className={`btn ${currentPage === index + 1 ? "btn-warning text-dark" : "btn-outline-warning"}`}>
+            {index + 1}
+          </button>)}
+        </div>}
       </div>
 
       <Footer />
